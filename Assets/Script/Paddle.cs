@@ -12,6 +12,7 @@ public class Paddle : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Debug.Log(speed);
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -32,7 +33,7 @@ public class Paddle : MonoBehaviour
         }else return Vector2.zero;
     }
 
-    private void MoveObject(Vector2 movement){
+    private void MoveObject(Vector2 movement) {
         rb.velocity=movement;
     }
 }
