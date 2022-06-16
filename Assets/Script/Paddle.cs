@@ -12,7 +12,6 @@ public class Paddle : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Debug.Log(speed);
         rb = GetComponent<Rigidbody2D>();
     }
 

@@ -12,6 +12,7 @@ public class ScoreContoller : MonoBehaviour
 
     private void Update()
     {
+        
         scoreKiri.text = manager.leftScore.ToString();
         scoreKanan.text = manager.rightScore.ToString();
     }
