@@ -18,7 +18,6 @@ public class PowerUpManager : MonoBehaviour
     {
         powerUpList = new List<GameObject>();
         timer = 0;
-        timerr=0;
     }
 
     private void Update()
@@ -28,19 +27,19 @@ public class PowerUpManager : MonoBehaviour
         if(timer > spawnInterval)
         {
             GenerateRandomPowerUp();
-            timer-=spawnInterval;
+            timer-=spawnInterval    ;
         }     
         
     }
     public void GenerateRandomPowerUp(){
-        GenerateRandomPowerUp(new Vector2(Random.Range(powerUpAreaMin.x,powerUpAreaMax.x), Random.Range(powerUpAreaMin.y,powerUpAreaMax.y)));
+        GenerateRandomPower(new Vector2(Random.Range(powerUpAreaMin.x,powerUpAreaMax.x), Random.Range(powerUpAreaMin.y,powerUpAreaMax.y)));
     }
 
-    public void GenerateRandomPowerUp(Vector2 position){
+    public void GenerateRandomPower(Vector2 position){
        
         if(powerUpList.Count >= maxPowerUpAmount)
         {
-            if(timerr>4){
+            if(timerr>spawnInterval*2){
                 RemovePowerUp(powerUpList[0]);
                 timer=0 ;
             }
